@@ -20,7 +20,7 @@ def main():
     thread2 = threading.Thread(target=T2_job, name='T2')
     added_thread.start()
     thread2.start()
-    thread2.join()
+    thread2.join() # 作用是让job先执行完
     added_thread.join()
 
     print('all done\n')
